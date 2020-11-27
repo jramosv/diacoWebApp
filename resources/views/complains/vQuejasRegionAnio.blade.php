@@ -85,7 +85,9 @@
     
     var table = $('.yajra-datatable').DataTable({
         
-        dom: 'Bfrtip',
+        dom: 'B<"top"l>frtip',
+        
+        lengthMenu: [[10, 25, 50, -1], [10, 25, 50, 'All']],
         buttons: [
             
             'copy', 'csv', {
