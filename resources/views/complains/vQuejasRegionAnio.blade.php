@@ -32,6 +32,7 @@
                         <table class="table table-bordered yajra-datatable table-striped table-hover">
                             <thead class="thead-dark">
                                 <tr>
+                                    <th width="280px">Acciones</th>
                                     <th>Documento</th>
                                     <th>Fecha</th>
                                     <th>Razón</th>
@@ -42,6 +43,7 @@
                                     <th>Municipio</th>
                                     <th>Departamento</th>
                                     <th>Region</th>
+                                    
                                    
 
                                     </tr>
@@ -97,6 +99,14 @@
         serverSide: true,
         ajax: "{{ route('vquejas') }}",
         columns: [
+            {
+	            "data": null,
+	            "className": "enlace",
+	            "defaultContent": null,
+                "render": function(data,type,row,meta) {
+                    return '<div class="btn-group"> <a class="btn btn-info btn-xs" title="Información" href="/complains/' + row.Id + '/edit"><i class="fa fa-info-circle" aria-hidden="true"></i></a>';
+                },
+            },
             {data: 'Documento', name: 'Documento'},
             {data: 'fecha', name: 'Fecha'},
             {data: 'Razón', name: 'Razón'},
@@ -107,6 +117,7 @@
             {data: 'Municipio', name: 'Municipio'},
             {data: 'Departamento', name: 'Departamento'},
             {data: 'Region', name: 'Region'},
+            
             
         ]
     });

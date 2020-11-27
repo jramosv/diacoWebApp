@@ -50,7 +50,7 @@ class VistasController extends Controller
     public function vistaQuejas(){
 
         $vquejas = DB::table('vquejas_region_anio')
-        ->select('Documento', 'fecha','Razón','Solicitud','Sucursal','Telefono','Direccion','Comercio','Municipio','Departamento','Region')
+        ->select('Id','Documento', 'fecha','Razón','Solicitud','Sucursal','Telefono','Direccion','Comercio','Municipio','Departamento','Region')
         ->orderBy('Fecha', 'desc')
         ->get();
         return Datatables::of($vquejas)
