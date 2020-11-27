@@ -30,9 +30,9 @@
 
 ## Screenshots
 
-![diaco](public/img/Screenshot_diaco.png "Welcome")
+![diaco](public/img/Screenshot1.png "Welcome")
 
-![diaco](public/img/Screenshot2_diaco.png "Complaints")
+![diaco](public/img/Screenshot2.png "Complaints")
 
 ## About Laravel
 
